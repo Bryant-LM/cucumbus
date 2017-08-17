@@ -10,6 +10,7 @@
       "extensions": "js,feature"
     }
   },
+  "engines" : { "node" : "6.11" },
   "scripts": {
     "mocha": "mocha",
     "cucumber": "cucumber-js",
