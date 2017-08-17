@@ -16,7 +16,7 @@ defineSupportCode(({Before, Given, When, Then}) => {
   })
 
   When('{str} shouts', function (name) {
-    shouty.shout(name, ARBITARY_MESSAGE)
+    shouty.saySomething(name, ARBITARY_MESSAGE, "shout")
   })
 
   Then('Lucy should hear Sean', function () {
@@ -26,5 +26,24 @@ defineSupportCode(({Before, Given, When, Then}) => {
   Then('Lucy should hear nothing', function () {
     assert.equal(shouty.getMessagesHeardBy('Lucy').size, 0)
   })
+
+    //-------------------------------
+
+
+    When('{str} whispers', function (name) {
+       //assert(true,true);
+        shouty.saySomething(name, ARBITARY_MESSAGE, "whisper")
+    })
+
+
+    Then('Lucy whispers hear Sean', function () {
+        // assert(true,true);
+        assert.equal(shouty.getMessagesHeardBy('Lucy').size, 1)
+    })
+
+    Then('Lucy whispers hear nothing', function () {
+        // assert(true,true);
+        assert.equal(shouty.getMessagesHeardBy('Lucy').size, 0)
+    })
 
 })
