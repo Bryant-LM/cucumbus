@@ -46,4 +46,11 @@ defineSupportCode(({Before, Given, When, Then}) => {
         assert.equal(shouty.getMessagesHeardBy('Lucy').size, 0)
     })
 
+    //--------------------------------------
+
+     When('{str} megaphones', function (name) {
+       //assert(true,true);
+        shouty.saySomething(name, ARBITARY_MESSAGE, "megaphones")
+    })
+
 })
