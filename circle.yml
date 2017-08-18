@@ -3,7 +3,12 @@ machine:
     version: 6.11
    
 deployment:
-  staging:
+  prod:
     branch: master
     heroku:
       appname: cucumbus
+deployment:
+  staging:
+    branch: staging
+    heroku:
+      appname: cucumbus-staging
