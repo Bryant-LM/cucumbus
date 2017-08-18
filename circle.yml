@@ -1,3 +1,9 @@
 machine:
   node:
     version: 6.11
+   
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: cucumbus
